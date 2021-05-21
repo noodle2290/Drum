@@ -1,6 +1,7 @@
 package app.murakami.takuro.drum
 
 import android.media.AudioAttributes
+import android.media.MediaPlayer
 import android.media.SoundPool
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -21,7 +22,8 @@ class MainActivity : AppCompatActivity() {
         R.raw.tom3,
         R.raw.hihat,
         R.raw.snare,
-        R.raw.bass
+        R.raw.bass,
+        R.raw.whistle
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -95,6 +97,12 @@ class MainActivity : AppCompatActivity() {
         Bass.setOnClickListener {
             if (mSoundID[8] != null) {
                 mSoundPool.play(mSoundID[8] as Int, 1.0F, 1.0F, 0, 0, 1.0F)
+            }
+        }
+
+        button.setOnClickListener {
+            if (mSoundID[9] != null) {
+                mSoundPool.play(mSoundID[9] as Int, 1.0F, 1.0F, 0, 0, 1.0F)
             }
         }
     }

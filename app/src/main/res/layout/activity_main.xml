@@ -5,9 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="fill"
+    android:background="@drawable/ph15"
     tools:context=".MainActivity">
 
     <androidx.gridlayout.widget.GridLayout
+        android:id="@+id/gridLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:foregroundGravity="fill"
@@ -17,6 +19,15 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:rowCount="2">
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="65dp"
+            android:layout_height="125dp"
+            android:backgroundTint="#00FFFFFF"
+            android:text="押せ"
+            app:layout_column="3"
+            app:layout_row="1" />
 
         <ImageButton
             android:id="@+id/cymbal1"
@@ -125,5 +136,6 @@
             app:layout_gravity="fill"
             app:layout_row="1"
             app:srcCompat="@drawable/tom3" />
+
     </androidx.gridlayout.widget.GridLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
